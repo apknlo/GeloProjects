@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "testduino",
+			"path": "../testduino"
+		},
+		{
+			"name": "120bLab1",
+			"path": "../120bLab1"
+		},
+		{
+			"name": "a",
+			"path": "../a"
+		},
+		{
+			"name": "120bLab2",
+			"path": "."
+		}
+	],
+	"settings": {}
+}

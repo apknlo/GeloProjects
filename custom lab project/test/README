@@ -1,0 +1,19 @@
+#define F_CPU 16000000UL
+#include <avr/io.h>
+#include <util/delay.h>
+
+#define BUZZER_PIN PB4
+
+int main(void) {
+    // Set BUZZER_PIN (PB4) as output
+    DDRB |= (1 << BUZZER_PIN);
+
+    while (1) {
+        // Create a square wave by toggling the pin
+        PORTB |= (1 << BUZZER_PIN);   // Pin HIGH
+        _delay_us(833);               // Delay for approx 600 Hz (1 / 600Hz = 1666us; 1666 / 2 = 833us)
+        PORTB &= ~(1 << BUZZER_PIN);  // Pin LOW
+        _delay_us(833);               // Delay for approx 600 Hz
+    }
+    return 0;
+}
